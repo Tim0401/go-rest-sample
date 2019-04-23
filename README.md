@@ -1,8 +1,42 @@
 # go-rest-sample
 GoでRESTAPIサーバの勉強
 
-docker-compose build --no-cache
-docker-compose up -d
+### 課題概要
+https://gist.github.com/koudaiii/62a9971625c9b6d4026da60f4b79dd03
 
-docker-compose -f docker-compose-3.yml build --no-cache
-docker-compose -f docker-compose-3.yml up -d
+
+### 課題
+課題１
+```
+docker-compose build --no-cache  
+docker-compose up -d  
+```
+
+課題３
+```
+docker-compose -f docker-compose-3.yml build --no-cache  
+docker-compose -f docker-compose-3.yml up -d  
+```
+
+公開URL（課題２）
+```
+http://34.85.73.127
+```
+
+### メモ
+dockerイメージ作成
+```
+export PROJECT_ID="$(gcloud config get-value project -q)"
+docker build -t gcr.io/${PROJECT_ID}/hello-app:v1 .
+gcloud docker -- push gcr.io/${PROJECT_ID}/hello-app:v1
+```
+gkeにデプロイ
+```
+kubectl run hello-web --image=gcr.io/${PROJECT_ID}/hello-app:v1 --port 8080
+kubectl expose deployment hello-web --type=LoadBalancer --port 80 --target-port 8080
+kubectl get service
+```
+
+参考：  
+https://qiita.com/i35_267/items/274206f50c9dec980a0c  
+https://www.topgate.co.jp/gcp07-how-to-start-docker-image-gke#google-container-engine-gke  
