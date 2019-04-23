@@ -6,10 +6,11 @@ https://gist.github.com/koudaiii/62a9971625c9b6d4026da60f4b79dd03
 
 
 ### 課題
-課題１
+
+公開URL（課題1,２）
 ```
-docker-compose build --no-cache  
-docker-compose up -d  
+https://go-rest-sample-238407.appspot.com/
+http://34.85.73.127
 ```
 
 課題３
@@ -17,13 +18,6 @@ docker-compose up -d
 docker-compose -f docker-compose-3.yml build --no-cache  
 docker-compose -f docker-compose-3.yml up -d  
 ```
-
-公開URL（課題２）
-```
-https://go-rest-sample-238407.appspot.com/
-http://34.85.73.127
-```
-
 ### メモ
 dockerイメージ作成
 ```
