@@ -2,6 +2,7 @@ FROM golang:latest AS build-env
 
 WORKDIR /app/go
 ADD . /app/go
+RUN go get google.golang.org/appengine
 RUN go build -o main main.go
 
 FROM alpine:latest
