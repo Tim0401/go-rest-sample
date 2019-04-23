@@ -1,9 +1,9 @@
 package main
 
 import (
-	"encoding/json"
-	"log"
-	"net/http"
+"encoding/json"
+"log"
+"net/http"
 )
 
 
@@ -36,3 +36,4 @@ func main() {
 		log.Fatal("ListenAndServe", err)
 	}
 }
+
