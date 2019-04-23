@@ -70,7 +70,7 @@ func (m *Message) UserHandler(w http.ResponseWriter, r *http.Request) {
 	case http.MethodGet:
 		data, _ := database.UsersAll(m.DB)
 		if data == nil {
-			res = []byte("{}")
+			res = []byte("[]")
 		} else {
 			res, err = json.Marshal(data)
 		}
