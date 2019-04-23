@@ -20,6 +20,7 @@ docker-compose -f docker-compose-3.yml up -d
 
 公開URL（課題２）
 ```
+https://go-rest-sample-238407.appspot.com/
 http://34.85.73.127
 ```
 
