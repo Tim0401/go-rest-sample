@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+
 type Ping struct {
 	Message string `json:"message"`
 }
@@ -29,6 +30,8 @@ func main() {
 	ping.Message = "Hello World!!"
 
 	http.HandleFunc("/", Handler)
+
+	// for GAE/Go
 	appengine.Main()
 
 	/*
